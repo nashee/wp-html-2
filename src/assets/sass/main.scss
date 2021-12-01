@@ -1,0 +1,15 @@
+//base
+@import "base/base";
+//abstracts
+@import "abstracts/helper";
+//layout
+@import "layout/header-main.scss";
+@import "layout/hereo-main";
+@import "layout/main-main";
+@import "layout/main.scss";
+@import "layout/footer-main.scss";
+//components
+@import "components/header";
+@import "components/hereo";
+@import "components/footer";
+@import "components/gallary";

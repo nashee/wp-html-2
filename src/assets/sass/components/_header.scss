@@ -1,0 +1,118 @@
+.header {
+    
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    &__nav {
+        display: flex;
+       
+    }
+    &__logo {
+        font-size: 25px;  
+    }
+    li {
+       margin-right: 1rem;
+    }
+    a {
+        color: darkgray;
+        padding: 1rem 2rem;
+        // background-color: gray;
+        border-radius: .4rem;  
+    }
+    
+    a:hover {
+        color: white !important;
+        padding: 1rem 2rem;
+        background-color: gray;
+        border-radius: .4rem;   
+    }
+    &__form {
+        
+    }
+
+    input {
+        font-size: 1.8rem;
+        border: 0;
+        border: .3rem #ccc solid;
+        border-radius: .9rem;
+        padding: .3rem;
+    }
+    .menu-button {
+        display: block;
+    }
+
+
+}
+@media (max-width: 700px) {
+    .header {
+        position: relative;
+    }
+    .header ul {
+        display: none;
+    }
+    .header .header__nav {
+        
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        border: 1px solid black;
+        width: 70%;
+        margin-left: 2rem;
+    }
+    li {
+        
+        border: 1px solid black;
+        margin-bottom: 1rem;
+        margin-right: 0;   
+    }
+    .header__nav a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .menu-button {
+        border: 0;
+    
+    }
+    .icon {
+        width: 25px;
+        border-top: .3rem black solid;
+        
+        display: block;
+        position: relative;
+    }
+    .icon::after, .icon::before {
+        content: '';
+        width: 25px;
+        height: .3rem;
+        margin-top: .4rem;
+        display: block;
+        background-color: black;
+        position: relative;
+    }
+   .header.active  .icon {
+       border-top: transparent;
+
+    }
+    .header.active  .icon::after {
+        margin-top: -.2rem;
+        transform: rotate(45deg);
+         
+     }
+     .header.active  .icon::before {
+        margin-top: 0;
+        transform: rotate(-45deg);
+     }
+     .header.active .header__nav {
+         display: block;
+     } 
+     .header.active .header__nav a{
+         color: white
+     } 
+     .header.active .header__nav {
+        background-color: darkslategrey;
+    } 
+}
